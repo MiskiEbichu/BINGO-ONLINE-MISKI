@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Bingo Online</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bingo Online PRO</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🎉 Bingo Online</h1>
+<div class="container">
+<h1>🎉 BINGO ONLINE</h1>
 
-<input type="text" id="codigo" placeholder="Ingrese código">
-<button onclick="entrar()">Entrar</button>
+<input type="text" id="codigo" placeholder="Ingresa tu código">
+<button onclick="entrar()">INGRESAR</button>
 
-<div id="carton"></div>
+<div id="cartilla"></div>
 
 <h2>Números Cantados</h2>
 <div id="cantados"></div>
 
-<script src="app.js"></script>
+<button class="bingo" onclick="reclamar()">🎉 RECLAMAR BINGO</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
