@@ -1,43 +1,37 @@
-let numerosCantados = [];
+let cantados=[];
 
 function entrar(){
-
-let carton = [
-5,18,33,46,70,
-2,20,31,55,61,
-14,22,"FREE",52,66,
-8,27,40,57,73,
-12,19,35,48,64
-];
-
-mostrarCarton(carton);
-
+crearCartilla();
 }
 
-function mostrarCarton(datos){
+function crearCartilla(){
 
 let html="";
 
-datos.forEach(n=>{
+for(let i=1;i<=25;i++){
+let n=Math.floor(Math.random()*75)+1;
+html+=`<div class="casilla" id="n${n}">${n}</div>`;
+}
 
-html += `<div class="casilla" id="n${n}">${n}</div>`;
-
-});
-
-document.getElementById("carton").innerHTML = html;
-
+document.getElementById("cartilla").innerHTML=html;
 }
 
 function cantarNumero(num){
 
-numerosCantados.push(num);
+cantados.push(num);
 
-document.getElementById("cantados").innerHTML += num + " - ";
+document.getElementById("cantados").innerHTML+=num+" ";
 
-let casilla = document.getElementById("n"+num);
+let casilla=document.getElementById("n"+num);
 
 if(casilla){
-casilla.classList.add("marcado");
+casilla.classList.add("activo");
 }
 
+let audio=new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
+audio.play();
+}
+
+function reclamar(){
+alert("🎉 Bingo reclamado");
 }
