@@ -1,9 +1,9 @@
 function sortear(){
 
-let n = document.getElementById("numero").value;
+let n=Math.floor(Math.random()*75)+1;
 
-localStorage.setItem("ultimoNumero",n);
+document.getElementById("numero").innerText=n;
 
-alert("Número cantado: "+n);
+localStorage.setItem("numeroActual",n);
 
 }
